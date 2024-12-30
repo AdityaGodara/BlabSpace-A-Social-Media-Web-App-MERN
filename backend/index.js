@@ -18,13 +18,8 @@ const postRouter = require('./Routes/postRoutes')
 const PORT = process.env.PORT;
 const URL = process.env.mongodbURL;
 
-
-//middleware
-const corsOptions = {
-    origin: "https://blabspace.onrender.com/"
-}
 //App Essentials
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
