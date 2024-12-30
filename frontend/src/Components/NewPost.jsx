@@ -25,7 +25,7 @@ const NewPost = () => {
         e.preventDefault();
         if (token) {
             try {
-                const response = await axios.get('http://localhost:5555/user/profile', {
+                const response = await axios.get('https://blabspace-backend.onrender.com/user/profile', {
                     headers: { Authorization: `Bearer ${token}` },
                 })
                 if (response.data.decoded === "token expired") {
@@ -44,7 +44,7 @@ const NewPost = () => {
                     try {
 
 
-                        await axios.post('http://localhost:5555/post/new-post', data)
+                        await axios.post('https://blabspace-backend.onrender.com/post/new-post', data)
                             .then((res) => {
                                 enqueueSnackbar(res.data.message, { varient: 'success' })
                                 setTimeout(()=>{

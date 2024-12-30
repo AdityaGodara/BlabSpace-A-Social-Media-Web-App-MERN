@@ -16,7 +16,7 @@ const GangInfoComp = () => {
     useEffect(() => {
         const fetchGangInfo = async () => {
             try {
-                const res = await axios.get(`http://localhost:5555/gang/info/${id}`)
+                const res = await axios.get(`https://blabspace-backend.onrender.com/gang/info/${id}`)
                 setGangInfo(res.data.data)
             } catch (error) {
                 console.log("Error fetching gang info:", error)
@@ -27,7 +27,7 @@ const GangInfoComp = () => {
         const fetchUserData = async () => {
             if (token) {
                 try {
-                    const response = await axios.get('http://localhost:5555/user/profile', {
+                    const response = await axios.get('https://blabspace-backend.onrender.com/user/profile', {
                         headers: { Authorization: `Bearer ${token}` },
                     })
                     if (response.data.decoded === "token expired") {
@@ -69,14 +69,14 @@ const GangInfoComp = () => {
                 username: userdata.username,
                 password: password
             }
-            const loginResponse = await axios.post('http://localhost:5555/user/login', loginData)
+            const loginResponse = await axios.post('https://blabspace-backend.onrender.com/user/login', loginData)
 
             if (loginResponse.status === 200) {
 
-                const joinResponse = await axios.put(`http://localhost:5555/gang/new-member/${id}`, { userId: userdata.id })
+                const joinResponse = await axios.put(`https://blabspace-backend.onrender.com/gang/new-member/${id}`, { userId: userdata.id })
                 enqueueSnackbar(joinResponse.data.message, { variant: 'success' })
 
-                const againLoginResponse = await axios.post('http://localhost:5555/user/login', loginData)
+                const againLoginResponse = await axios.post('https://blabspace-backend.onrender.com/user/login', loginData)
 
                 window.localStorage.setItem("isToken", againLoginResponse.data.token)
                 enqueueSnackbar("Successfully joined the gang and logged in", { variant: 'success' })

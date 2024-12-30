@@ -23,12 +23,12 @@ const PostInfo = () => {
     useEffect(() => {
         const fetchPostInfo = async () => {
             try {
-                const res = await axios.get(`http://localhost:5555/post/info/${id}`)
+                const res = await axios.get(`https://blabspace-backend.onrender.com/post/info/${id}`)
                 setPost(res.data.data)
                 if (res.data.data.gangID) {
                     try {
                         const gid = res.data.data.gangID;
-                        const g_res = await axios.get(`http://localhost:5555/gang/info/${gid}`);
+                        const g_res = await axios.get(`https://blabspace-backend.onrender.com/gang/info/${gid}`);
                         setGangInfo(g_res.data.data);
                     } catch (error) {
                         console.log("Error fetching gang info:", error);
@@ -46,7 +46,7 @@ const PostInfo = () => {
         const fetchUserData = async () => {
             if (token) {
                 try {
-                    const response = await axios.get('http://localhost:5555/user/profile', {
+                    const response = await axios.get('https://blabspace-backend.onrender.com/user/profile', {
                         headers: { Authorization: `Bearer ${token}` },
                     });
                     if (response.data.decoded === "token expired") {
@@ -58,7 +58,7 @@ const PostInfo = () => {
                         if (response.data.decoded.gang_id) {
                             try {
                                 const id = response.data.decoded.gang_id;
-                                const res = await axios.get(`http://localhost:5555/gang/info/${id}`);
+                                const res = await axios.get(`https://blabspace-backend.onrender.com/gang/info/${id}`);
                                 setUserGang(res.data.data);
                             }
                             catch(error){
@@ -89,7 +89,7 @@ const PostInfo = () => {
                 txt: comment,
                 gname: userGang.name
             }
-            const addComm = await axios.put(`http://localhost:5555/post/add-comment/${pid}`, data)
+            const addComm = await axios.put(`https://blabspace-backend.onrender.com/post/add-comment/${pid}`, data)
             if (addComm.data.message) {
                 enqueueSnackbar(addComm.data.message, { varient: 'success' })
                 console.log(addComm.data.message)

@@ -14,7 +14,7 @@ const ProfileCard = () => {
         const fetchData = async () => {
             if (token) {
                 try {
-                    const userResponse = await axios.get('http://localhost:5555/user/profile', {
+                    const userResponse = await axios.get('https://blabspace-backend.onrender.com/user/profile', {
                         headers: { Authorization: `Bearer ${token}` },
                     })
 
@@ -25,7 +25,7 @@ const ProfileCard = () => {
                         setUserData(userResponse.data.decoded)
 
                         if (userResponse.data.decoded.gang_id) {
-                            const gangResponse = await axios.get(`http://localhost:5555/gang/info/${userResponse.data.decoded.gang_id}`)
+                            const gangResponse = await axios.get(`https://blabspace-backend.onrender.com/gang/info/${userResponse.data.decoded.gang_id}`)
                             setGangData(gangResponse.data.data)
                         }
                     }
@@ -43,7 +43,7 @@ const ProfileCard = () => {
         if (!userData) return
 
         try {
-            const res = await axios.delete(`http://localhost:5555/user/delete/${userData.id}`)
+            const res = await axios.delete(`https://blabspace-backend.onrender.com/user/delete/${userData.id}`)
             clearLocalStorage();
             enqueueSnackbar(res.data.message, { variant: 'success' })
             setTimeout(() => {

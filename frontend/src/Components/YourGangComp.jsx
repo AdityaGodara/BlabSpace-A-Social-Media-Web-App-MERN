@@ -25,7 +25,7 @@ const YourGangComp = () => {
             if (token) {
                 try {
                     setIsLoading(true);
-                    const response = await axios.get('http://localhost:5555/user/profile', {
+                    const response = await axios.get('https://blabspace-backend.onrender.com/user/profile', {
                         headers: { Authorization: `Bearer ${token}` },
                     });
                     if (response.data.decoded === "token expired") {
@@ -37,10 +37,10 @@ const YourGangComp = () => {
                         if (response.data.decoded.gang_id) {
                             try {
                                 const id = response.data.decoded.gang_id;
-                                const res = await axios.get(`http://localhost:5555/gang/info/${id}`);
+                                const res = await axios.get(`https://blabspace-backend.onrender.com/gang/info/${id}`);
                                 setGangInfo(res.data.data);
 
-                                const p_res = await axios.post(`http://localhost:5555/post/${id}`);
+                                const p_res = await axios.post(`https://blabspace-backend.onrender.com/post/${id}`);
                                 setPosts(p_res.data.data);
                             } catch (error) {
                                 console.log("Error fetching gang info:", error);
@@ -88,14 +88,14 @@ const YourGangComp = () => {
                 username: userdata.username,
                 password: password
             }
-            const loginResponse = await axios.post('http://localhost:5555/user/login', loginData)
+            const loginResponse = await axios.post('https://blabspace-backend.onrender.com/user/login', loginData)
 
             if (loginResponse.status === 200) {
 
-                const joinResponse = await axios.put(`http://localhost:5555/gang/leave-gang/${gangInfo._id}`, { userId: userdata.id })
+                const joinResponse = await axios.put(`https://blabspace-backend.onrender.com/gang/leave-gang/${gangInfo._id}`, { userId: userdata.id })
                 enqueueSnackbar(joinResponse.data.message, { variant: 'success' })
 
-                const againLoginResponse = await axios.post('http://localhost:5555/user/login', loginData)
+                const againLoginResponse = await axios.post('https://blabspace-backend.onrender.com/user/login', loginData)
 
                 window.localStorage.setItem("isToken", againLoginResponse.data.token)
                 enqueueSnackbar("Successfully left the gang and logged in", { variant: 'success' })
@@ -119,7 +119,7 @@ const YourGangComp = () => {
     const handleDltPost = async (pid) => {
         try {
 
-            const delRes = await axios.delete(`http://localhost:5555/post/delete/${pid}`)
+            const delRes = await axios.delete(`https://blabspace-backend.onrender.com/post/delete/${pid}`)
             if (delRes.data.message) {
                 enqueueSnackbar(delRes.data.message, { varient: 'success' })
                 setTimeout(() => {
@@ -140,7 +140,7 @@ const YourGangComp = () => {
                 txt: comment,
                 gname: gangInfo.name
             }
-            const addComm = await axios.put(`http://localhost:5555/post/add-comment/${pid}`, data)
+            const addComm = await axios.put(`https://blabspace-backend.onrender.com/post/add-comment/${pid}`, data)
             if (addComm.data.message) {
                 enqueueSnackbar(addComm.data.message, { varient: 'success' })
                 console.log(addComm.data.message)

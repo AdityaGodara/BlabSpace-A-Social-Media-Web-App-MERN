@@ -21,7 +21,7 @@ const CreateGangComp = () => {
     const fetchUserData = async (currentToken) => {
         if (currentToken) {
             try {
-                const response = await axios.get('http://localhost:5555/user/profile', {
+                const response = await axios.get('https://blabspace-backend.onrender.com/user/profile', {
                     headers: { Authorization: `Bearer ${currentToken}` },
                 });
                 if (response.data.decoded === "token expired") {
@@ -55,7 +55,7 @@ const CreateGangComp = () => {
             leader
         };
         try {
-            const response = await axios.post('http://localhost:5555/gang/new-gang', data);
+            const response = await axios.post('https://blabspace-backend.onrender.com/gang/new-gang', data);
             
             if (response.data.gangId) {
                 // Gang created successfully, now logout and login again

@@ -12,7 +12,7 @@ const GangList = () => {
     }, [])
 
     const fetchGangs = () => {
-        axios.get('http://localhost:5555/gang/all-gangs')
+        axios.get('https://blabspace-backend.onrender.com/gang/all-gangs')
             .then((res) => {
                 const shuffledData = res.data.data.sort(() => Math.random() - 0.5)
                 setGangs(shuffledData)

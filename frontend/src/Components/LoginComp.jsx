@@ -17,7 +17,7 @@ const LoginComp = () => {
             username,
             password
         };
-        axios.post('http://localhost:5555/user/login', data)
+        axios.post('https://blabspace-backend.onrender.com/user/login', data)
             .then((res) => {
                 window.localStorage.setItem("isToken", res.data.token)
 

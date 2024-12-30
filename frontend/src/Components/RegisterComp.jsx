@@ -26,7 +26,7 @@ const RegisterComp = () => {
             password,
             avatar
         }
-        axios.post('http://localhost:5555/user/register', data)
+        axios.post('https://blabspace-backend.onrender.com/user/register', data)
             .then((res) => {
                 enqueueSnackbar(res.data.message, { varient: 'success' })
                 navigate('/login')
