@@ -1,0 +1,196 @@
+.card-container{
+    margin: 4em;
+    box-shadow: 0px 0px 5px grey;
+    border-radius: 30px;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    animation: flyIn 0.5s 1;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.card-name{
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2em;
+}
+.card-uname{
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1em;
+    color: gray;
+    margin-top: 20px;
+}
+.card-gender{
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1em;
+    color: gray;
+}
+.delete-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-top: 2em;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+.delete-btn:hover{
+    background-color: maroon;
+}
+
+.logout-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: #7DD33A;
+    color: white;
+    padding: 10px;
+    margin-top: 2em;
+    margin-left: .5em;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+.logout-btn:hover{
+    background-color: green;
+}
+.user-pfp{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100px;
+    margin-bottom: -10px;
+    margin-right: 10px;
+}
+
+.gleader-profcard{
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.create-gang-btn{
+    padding: 10px;
+    border: 3px solid gold;
+    color: gold;
+    background-color: white;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.create-gang-btn:hover{
+    border-radius: 10px;
+    color: white;
+    background-color: gold;
+}
+
+.join-existing-btn{
+    border: 3px solid #7DD33A;
+    background-color: white;
+    color: #7DD33A;
+    padding: 10px;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+.join-existing-btn:hover{
+    background-color: #7DD33A;
+    color: white;
+    border-radius: 10px;
+}
+.not-txt, .or-txt{
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.leader-icon{
+    width: 2em;
+}
+
+.ganginfo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.gang-text-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gang-title-pfcard {
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.tagline {
+    font-size: 1em;
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.gang-stamp-pfcard {
+    width: 15em;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ginfo-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: skyblue;
+    color: white;
+    padding: 10px;
+    margin-top: 2em;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+.ginfo-btn:hover{
+    background-color: rgb(49, 162, 207);
+}
+.ginfo-btn:focus{
+    outline: none;
+}
+
+@media (max-width: 720px) {
+    .card-container{
+        display: block;
+    }
+    .gleader-profcard{
+        margin-top: 2em;
+    }
+    .ganginfo-section {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 50px;
+    }
+
+    .gang-text-info {
+        text-align: center;
+        width: 100%;
+    }
+
+    .gang-stamp-pfcard {
+        width: 100%;
+        max-width: 15em;
+        margin: 1em auto 0;
+    }
+}

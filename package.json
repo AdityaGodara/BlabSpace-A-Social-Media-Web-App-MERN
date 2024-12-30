@@ -1,0 +1,16 @@
+{
+  "name": "blabspace-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "cd backend && npm i",
+    "start-server": "cd backend && npm run dev",
+    "install-client": "cd frontend && npm i",
+    "build-client": "cd frontend && npm run build",
+    "start-client": "cd frontend && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

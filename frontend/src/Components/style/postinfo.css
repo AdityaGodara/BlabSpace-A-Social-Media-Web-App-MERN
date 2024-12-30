@@ -1,0 +1,260 @@
+.pi-back-btn {
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #5C9BFF;
+    border-radius: 5px;
+    transition-duration: .2s;
+    color: #5C9BFF;
+    background-color: white;
+}
+
+.pi-gangname{
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+.pi-gangsign{
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.3em;
+    margin-left: 30px;
+}
+
+.pi-gangInfo{
+    padding: 20px;
+    margin: 20px;
+    color: black;
+}
+
+.pi-back-btn:hover {
+    background-color: #5C9BFF;
+    color: white;
+    border-radius: 10px;
+}
+
+.pi-post-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pi-post-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.pi-post-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px grey;
+    padding: 20px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.pi-post-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pi-post-title {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.pi-post-date, .pi-post-username {
+    font-family: "Urbanist", sans-serif;
+    color: rgb(95, 95, 95);
+}
+
+.pi-post-body {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.pi-comment-section {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pi-comment-icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.pi-comment-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pi-comm-length {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-left: 5px;
+}
+
+.pi-comment {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.pi-comm-txt {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pi-comm-gangname{
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pi-comment-area {
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 0px 5px grey;
+    width: 300px;
+    max-height: 600px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.pi-comm-uname {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.pi-comment-box {
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #fbd183;
+    border-radius: 8px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+#send-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+#cmt-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    padding: 10px;
+}
+
+.pi-comment-box:focus{
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+    .pi-post-container {
+        flex-direction: column;
+    }
+
+    .pi-post-card {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .pi-comment-area {
+        width: 100%;
+        max-height: none;
+    }
+
+    .pi-gangInfo{
+        padding: 20px;
+        margin: 20px;
+        display: grid;
+    }
+
+    .pi-gangsign{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pi-post-card {
+        padding: 15px;
+    }
+
+    .pi-post-title {
+        font-size: 20px;
+    }
+
+    .pi-post-body {
+        font-size: 14px;
+    }
+
+    .pi-gangInfo{
+        padding: 20px;
+        margin: 20px;
+        display: grid;
+    }
+    .pi-gangsign{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pi-post-card {
+        padding: 10px;
+    }
+
+    .pi-post-title {
+        font-size: 18px;
+    }
+
+    .pi-post-body {
+        font-size: 13px;
+    }
+
+    .pi-gangInfo{
+        padding: 20px;
+        margin: 20px;
+        display: grid;
+    }
+
+    .pi-gangsign{
+        margin-left: 0px;
+    }
+}

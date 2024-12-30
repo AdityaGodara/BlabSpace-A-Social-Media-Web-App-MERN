@@ -1,0 +1,241 @@
+.ginfo-backbtn {
+    padding: 10px;
+    border: 2px solid #5C9BFF;
+    color: #5C9BFF;
+    background-color: white;
+    transition-duration: .3s;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.ginfo-container {
+    margin: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.ginfo-content{
+    flex: 1;
+    margin-right: 20px;
+}
+
+.ginfo-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ginfo-name-sign {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ginfo-name {
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+}
+
+.ginfo-sign {
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.3em;
+}
+
+.ginfo-tagline {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3em;
+    color: #454443;
+    margin-top: 10px;
+}
+
+.description {
+    margin-top: 50px;
+}
+
+.desc-text {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.desc {
+    max-width: 600px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    transition-duration: 0.2s;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.desc:hover{
+    background-color: rgb(225, 225, 225);
+}
+
+.ginfo-memcount {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 40px;
+    font-size: 1.1em;
+}
+
+.ginfo-joinbtn{
+    background-color: white;
+    border: 3px solid #7DD33A;
+    padding: 10px;
+    color: #7DD33A;
+    margin-top: 30px;
+    transition-duration: 0.3s;
+    width: 20em;
+    cursor: pointer;
+}
+.ginfo-joinbtn:hover{
+    background-color: #7DD33A;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+.ginfo-backbtn:hover {
+    background-color: #5C9BFF;
+    color: white;
+    border-radius: 10px;
+}
+
+.conf-pass{
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    border: 2px solid #7DD33A;
+}
+.conf-pass:focus{
+    outline: none;
+}
+.conf-btn{
+    padding: 10px;
+    border: 2px solid #7DD33A;
+    color: #7DD33A;
+    border-radius: 0px 10px 10px 0px;
+    background-color: white;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.conf-btn:hover{
+    color: white;
+    background-color: #7DD33A;
+}
+
+.password-prompt{
+    margin-top: 30px;
+}
+
+.gang-stamp-container {
+    flex: 0 0 auto;
+    margin-left: 20px;
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
+}
+
+.gang-stamp {
+    max-width: 300px;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 2px 2px 5px black;
+}
+
+@media (max-width: 768px) {
+    .ginfo-container {
+        margin: 10px;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .ginfo-name {
+        font-size: 2.5em;
+    }
+
+    .ginfo-sign {
+        font-size: 2em;
+    }
+
+    .ginfo-tagline {
+        font-size: 1.1em;
+    }
+
+    .desc {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    .ginfo-backbtn {
+        left: 10px;
+        top: 10px;
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .ginfo-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .gang-stamp-container {
+        margin-left: 0;
+        align-self: center;
+        position: static;
+    }
+
+    .gang-stamp {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ginfo-name {
+        font-size: 2em;
+    }
+
+    .ginfo-sign {
+        font-size: 1.8em;
+    }
+
+    .ginfo-tagline {
+        font-size: 1em;
+    }
+
+    .desc {
+        margin-left: 0;
+    }
+    .ginfo-backbtn {
+        left: 5px;
+        top: 5px;
+        padding: 6px;
+        font-size: 0.8em;
+    }
+    .gang-stamp {
+        max-width: 100px;
+    }
+}
+
+

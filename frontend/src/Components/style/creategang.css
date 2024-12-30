@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+.center {
+    width: 100%;
+    max-width: 400px;
+}
+
+.logreg-title {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.gang-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gang-form > input[type="text"],
+.gang-form > input[type="email"],
+.gang-form > input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    border-bottom: 3px solid #7DD33A;
+    background-color: white;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.gang-form > input:focus {
+    outline: none;
+}
+.gangdesc{
+    padding: 10px;
+    border: 1px solid #7DD33A;
+    border-bottom: 3px solid #7DD33A;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    resize: none;
+}
+.gangdesc:focus{
+    outline: none;
+    
+}
+
+.gang-cat{
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 20px;
+}
+
+.stamp-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.stamp-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stamp-btn {
+    width: 7em;
+    height: 7em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.radio-btn-stamp {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}

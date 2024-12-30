@@ -1,0 +1,99 @@
+.navbar {
+    background-color: #7DD33A;
+    box-shadow: 0 2px 3px grey;
+    padding: 10px 20px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.title {
+    font-family: "Libre Barcode 39 Text", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.3em;
+}
+
+.nav-items {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    display: flex;
+    margin-right: 70px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.nav-items>li {
+    margin-right: 5em;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.nav-items>li:last-child {
+    margin-right: 0;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .nav-items>li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+.nav-links{
+    text-decoration: none;
+    color: black;
+}
+.nav-links:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}

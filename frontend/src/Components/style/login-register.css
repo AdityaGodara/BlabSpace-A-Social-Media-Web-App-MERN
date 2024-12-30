@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+.center {
+    width: 100%;
+    max-width: 400px;
+}
+
+.logreg-title {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form > input[type="text"],
+.login-form > input[type="email"],
+.login-form > input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    border-bottom: 3px solid #7DD33A;
+    background-color: white;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.login-form > input:focus {
+    outline: none;
+}
+
+.gender-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.gender-group label {
+    margin-right: 20px;
+}
+
+.login-btn {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #7DD33A;
+    color: white;
+    border: none;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    box-shadow: 3px 3px 0px darkgreen;
+    border-radius: 5px;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+    word-wrap: break-word;
+}
+
+.links > a {
+    cursor: pointer;
+    margin-left: 5px;
+    text-underline-offset: 2px;
+}
+.pfp-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.avatar-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-btn {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.photo-btn:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+.radio-btn-pfp {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .logreg-title {
+        font-size: 2em;
+    }
+
+    .login-form > input[type="text"],
+    .login-form > input[type="email"],
+    .login-form > input[type="password"] {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        font-size: 1.1em;
+    }
+
+    .pfp-container {
+        gap: 5px;
+    }
+
+    .photo-btn {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
